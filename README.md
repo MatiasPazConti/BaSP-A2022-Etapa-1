@@ -12,5 +12,5 @@ Also, it's possible to assign different roles in different projects to the same 
 2. Run index.html file
 ```
 
-Author: Matias Paz Conti
-Technology: HTML
+Author: Matias Paz Conti.
+Technology used: HTML.
