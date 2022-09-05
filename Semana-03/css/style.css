@@ -1,9 +1,59 @@
+header {
+    display: inline-block;
+    background-color: #FF0000;
+    border-radius: 15px;
+    position: absolute;
+    width: 686px;
+    height: 110px;
+    left: 476px;
+    top: 86px;
+    font: bold 42px Roboto, Helvetica, sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+header h1 {
+    position: relative;
+    top: 24px;
+}
+
+aside {
+    display: block;
+    background-color: #FF0000;
+    position: fixed;
+    width: 277px;
+    height: 100%;
+}
+
 .article-45p {
     display: inline-block;
-    width: 45%;
+    width: 40%;
 }
 
 .article-30p {
     display: inline-block;
-    width: 30%;
+    width: 25%;
+}
+
+footer {
+    background-color: #FF0000;
+    position: absolute;
+    width: 1235px;
+    height: 177px;
+    left: 277px;
+    top: 5715px;
+    font: bold 28px Roboto, Helvetica, sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+footer fieldset {
+    display: inline-block;
+    margin-top: 22px;
+    margin-bottom: 14px;
+    letter-spacing: 75px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
 }
