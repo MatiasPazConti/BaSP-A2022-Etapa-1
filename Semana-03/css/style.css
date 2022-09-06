@@ -120,6 +120,59 @@ aside {
 }
 /*  Section 02: Completed   */
 
+/*  Section 03  */
+#section-03 h2 {
+    background-color: #FF0000;
+    position: absolute;
+    width: 472px;
+    left: 294px;
+    top: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font: bold 24px 'Roboto Flex', sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section-03 fieldset {
+    display: inline-block;
+    position: absolute;
+    width: 1146px;
+    height: 472px;
+    left: 89px;
+    top: 350px;
+    border: 1px solid greenyellow;
+}
+
+.section-03-article {
+    display: inline-block;
+    width: 473px;
+    height: 126px;
+    text-align: center;
+    color: black;
+}
+
+.section-03-article section {
+    display: inline-block;
+    width: 361px;
+}
+
+.section-03-article h3 {
+    font: bold 24px 'Roboto Flex', sans-serif;
+}
+
+.section-03-article p {
+    font: normal 15px 'Roboto Flex', sans-serif;
+}
+
+.s03-margin-right {
+    margin-right: 190px;
+}
+
+.s03-margin-bottom {
+    margin-bottom: 190px;
+}
+
 
 /*  Section 05  */
 #section-05 h2 {
