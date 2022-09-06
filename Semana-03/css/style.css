@@ -75,20 +75,57 @@ aside {
 }
 /*  Section 01: Completed   */
 
-/*  Section 02  */
+/*  Section 02: Completed   */
+#section-02 h2 {
+    background-color: #FF0000;
+    position: absolute;
+    width: 472px;
+    left: 299px;
+    top: 91px;
+    font: bold 28px 'Roboto Flex', sans-serif;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section-02 fieldset {
+    position: absolute;
+    width: 1009px;
+    height: 443px;
+    left: 153px;
+    top: 336px;
+    border: 1px solid greenyellow;
+}
+
 .section-02-article {
     display: inline-block;
-    width: 353px;
-    height: 88px;
-    margin-right: 124px;
+    width: 484px;
+    height: 157px;
+    font: bold 32px 'Roboto Flex', sans-serif;
 }
+
+.section-02-article img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.section-02-article h3 {
+    display: inline-block;
+    position: relative;
+    width: 337px;
+    height: 37px;
+    bottom: 63px;
+}
+/*  Section 02: Completed   */
+
 
 /*  Section 05  */
 #section-05 h2 {
     background-color: #FF0000;
     position: absolute;
     width: 430px;
-    height: 35px;
     left: 402px;
     top: 77px;
     padding-top: 15px;
