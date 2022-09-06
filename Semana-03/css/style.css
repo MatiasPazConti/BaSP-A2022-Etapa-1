@@ -1,3 +1,4 @@
+/*  Header Section  */
 header {
     display: inline-block;
     background-color: #FF0000;
@@ -17,6 +18,7 @@ header h1 {
     top: 24px;
 }
 
+/*  Aside Section   */
 aside {
     display: inline-block;
     background-color: #FF0000;
@@ -25,6 +27,7 @@ aside {
     height: 100%;
 }
 
+/*  Main Section    */
 .main-section {
     display: inline-block;
     position: relative;
@@ -32,6 +35,33 @@ aside {
     width: 1235px;
     height: 982px;
     border: 1px solid purple;
+}
+
+/*  Section 01: Completed  */
+#s01-p01 {
+    position: relative;
+    width: 450px;
+    height: 25px;
+    top: 289px;
+    left: 316px;
+    font: italic 16px 'Roboto Flex', sans-serif;
+}
+
+#s01-p02 {
+    position: relative;
+    width: 342px;
+    height: 124px;
+    left: 754px;
+    top: 89px;
+    font: italic 16px 'Roboto Flex', sans-serif;
+}
+
+#s01-img {
+    position: relative;
+    width: 417px;
+    height: 337px;
+    left: 209px;
+    top: 377px;
 }
 
 .article-45p {
@@ -43,7 +73,17 @@ aside {
     display: inline-block;
     width: 25%;
 }
+/*  Section 01: Completed   */
 
+/*  Section 02  */
+.section-02-article {
+    display: inline-block;
+    width: 353px;
+    height: 88px;
+    margin-right: 124px;
+}
+
+/*  Section 05  */
 #section-05 h2 {
     background-color: #FF0000;
     position: absolute;
@@ -58,7 +98,7 @@ aside {
     color: #FFFFFF;
 }
 
-#section-05 section {
+#section-05 > section {
     background-color: #EC4A4A75;
     position: absolute;
     width: 1235px;
@@ -72,6 +112,8 @@ aside {
     height: 371px;
     width: 377px;
     border: 1px solid greenyellow;
+    margin-right: 26px;
+    margin-top: 31px;
 }
 
 .section-05-article h3 {
@@ -82,10 +124,13 @@ aside {
 .section-05-article p {
     background-color: #00000080;
     border-radius: 30px;
+    width: 377px;
+    height: 347px;
     font: normal 20px 'Roboto Flex', sans-serif;
     color: #f8f8f8;
 }
 
+/*  Footer Section  */
 footer {
     background-color: #FF0000;
     position: relative;
