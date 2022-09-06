@@ -7,7 +7,7 @@ header {
     height: 110px;
     left: 476px;
     top: 86px;
-    font: bold 42px Roboto, Helvetica, sans-serif;
+    font: bold 42px 'Roboto Flex', sans-serif;
     text-align: center;
     color: #FFFFFF;
 }
@@ -18,11 +18,15 @@ header h1 {
 }
 
 aside {
-    display: block;
+    display: inline-block;
     background-color: #FF0000;
     position: fixed;
     width: 277px;
     height: 100%;
+}
+
+main {
+    display: inline-block;
 }
 
 .article-45p {
@@ -35,6 +39,51 @@ aside {
     width: 25%;
 }
 
+#section-05 h2 {
+    background-color: #FF0000;
+    position: absolute;
+    width: 430px;
+    height: 35px;
+    left: 643px;
+    top: 4005px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font: bold 30px 'Roboto Flex', sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section-05 section {
+    background-color: #EC4A4A75;
+    position: absolute;
+    height: 830px;
+    width: 1235px;
+    left: 277px;
+    top: 4080px;
+    text-align: center;
+}
+
+.section-05-article {
+    display: inline-block;
+    position: relative;
+    height: 371px;
+    width: 377px;
+    top: 40px;
+    border: 1px solid greenyellow;
+}
+
+.section-05-article h3 {
+    font: bold 36px 'Rokkitt', serif;
+    color: black;
+}
+
+.section-05-article p {
+    background-color: #00000080;
+    border-radius: 30px;
+    font: normal 20px 'Roboto Flex', sans-serif;
+    color: #f8f8f8;
+}
+
 footer {
     background-color: #FF0000;
     position: absolute;
@@ -42,7 +91,7 @@ footer {
     height: 177px;
     left: 277px;
     top: 5715px;
-    font: bold 28px Roboto, Helvetica, sans-serif;
+    font: bold 28px 'Roboto Flex', sans-serif;
     text-align: center;
     color: #FFFFFF;
 }
