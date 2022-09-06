@@ -65,13 +65,13 @@
                     Functionalities
                 </h2>
                 <fieldset>
-                    <article class="section-02-article">
+                    <article class="section-02-article s02-margin-bottom">
                         <img src="./assets/calendar-clock.png" alt="calendar-clock.png">
                         <h3>
                             Record hours
                         </h3>
                     </article>
-                    <article class="section-02-article">
+                    <article class="section-02-article s02-margin-bottom">
                         <img src="./assets/calendar-edit.png" alt="calendar-edit.png">
                         <h3>
                             Reports
@@ -149,48 +149,52 @@
                 </fieldset>
             </section>
             <!--Section 04-->
-            <section  id="section-04" class="main-section">
-                <h2>
-                    Information request
-                </h2>
-                <form>
-                    <fieldset>
-                        <label for="fname">
-                            Name
-                        </label>
-                        <input type="text" id="fname">
-                    </fieldset>
-                    <fieldset>
-                        <label for="fmail">
-                            Email
-                        </label>
-                        <input type="text" id="fmail">
-                    </fieldset>
-                    <fieldset>
-                        <label>
-                            Contact area
-                        </label>
-                        <input type="radio" name="ca-option" id="hrdep">
-                        <label for="hrdep">
-                            HR department
-                        </label>
-                        <input type="radio" name="ca-option" id="systems">
-                        <label for="systems">
-                            Systems
-                        </label>
-                        <input type="radio" name="ca-option" id="comm">
-                        <label for="comm">
-                            Commercialization
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <label for="message">
-                            Message
-                        </label>
-                        <textarea name="message" id="message"></textarea>
-                    </fieldset>
-                    <input type="submit" value="confirm">
-                </form>
+            <section id="section-04" class="main-section">
+                <fieldset id="s04-form-box">
+                    <h2>
+                        Information request
+                    </h2>
+                    <form id="s04-form">
+                        <section>
+                            <label for="fname" class="first-half-label">
+                                Name
+                            </label>
+                            <input type="text" id="fname" class="text-input">
+                        </section>
+                        <section>
+                            <label for="fmail" class="first-half-label">
+                                Email
+                            </label>
+                            <input type="text" id="fmail" class="text-input">
+                        </section>
+                        <section>
+                            <label class="first-half-label" id="ca-label">
+                                Contact area
+                            </label>
+                            <section id="radio-section">
+                                <input type="radio" name="ca-option" id="hrdep" class="radio-input">
+                                <label for="hrdep" class="radio-label">
+                                    HR department
+                                </label>
+                                <input type="radio" name="ca-option" id="systems" class="radio-input">
+                                <label for="systems" class="radio-label">
+                                    Systems
+                                </label>
+                                <input type="radio" name="ca-option" id="comm" class="radio-input">
+                                <label for="comm" class="radio-label">
+                                    Commercialization
+                                </label>
+                            </section>
+                        </section>
+                        <section>
+                            <label for="message" class="first-half-label" id="message-label">
+                                Message
+                            </label>
+                            <textarea name="message" id="message"></textarea>
+                        </section>
+                        <input type="submit" value="Confirm" id="form-submit">
+                    </form>
+                </fieldset>
             </section>
             <!--Section 05-->
             <section id="section-05" class="main-section">

@@ -73,7 +73,6 @@ aside {
     display: inline-block;
     width: 25%;
 }
-/*  Section 01: Completed   */
 
 /*  Section 02: Completed   */
 #section-02 h2 {
@@ -118,9 +117,12 @@ aside {
     height: 37px;
     bottom: 63px;
 }
-/*  Section 02: Completed   */
 
-/*  Section 03  */
+.s02-margin-bottom {
+    margin-bottom: 123px;
+}
+
+/*  Section 03: Completed   */
 #section-03 h2 {
     background-color: #FF0000;
     position: absolute;
@@ -173,6 +175,95 @@ aside {
     margin-bottom: 190px;
 }
 
+/*  Section 04  */
+#section-04 fieldset {
+    background-color: #E5E5E5;
+    position: absolute;
+    width: 737px;
+    height: 511px;
+    left: 165px;
+    top: 237px;
+}
+
+#section-04 h2 {
+    background-color: #FF0000;
+    width: 737px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font: bold 24px 'Roboto Flex', sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#s04-form-box form {
+    position: absolute;
+    left: 79px;
+    top: 113px;
+}
+
+.first-half-label {
+    display: inline-block;
+    width: 255px;
+    height: 33px;
+    margin-right: 19px;
+    margin-bottom: 15px;
+    font: bold 22px 'Roboto Flex', sans-serif;
+    border: 1px solid greenyellow;
+}
+
+.text-input {
+    display: inline-block;
+    width: 255px;
+    height: 33px;
+    margin-bottom: 15px;
+}
+
+#ca-label {
+    position: relative;
+    bottom: 40px;
+    font: bold 22px 'Roboto Flex', sans-serif;
+}
+
+#radio-section {
+    display: inline-block;
+    width: 150px;
+    height: 63px;
+}
+
+.radio-input {
+    display: inline-block;
+}
+
+.radio-label {
+    display: inline-block;
+    width: 120px;
+    height: 20px;
+    font: bold 14px 'Roboto Flex', sans-serif;
+    color: #373867;
+}
+
+#message-label {
+    position: relative;
+    bottom: 123px;
+}
+
+#s04-form textarea {
+    width: 255px;
+    height: 136px;
+}
+
+#form-submit {
+    background-color: #FF0000;
+    position: relative;
+    border-radius: 15px;
+    width: 255px;
+    height: 40px;
+    left: 280px;
+    bottom: 20px;
+    font: bold 14px 'Roboto Flex', sans-serif;
+    color: #FFFFFF;
+    border: 0px;
+}
 
 /*  Section 05  */
 #section-05 h2 {
