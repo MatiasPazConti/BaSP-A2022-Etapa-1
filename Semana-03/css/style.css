@@ -30,6 +30,63 @@ aside {
     position: fixed;
     width: 20%;
     height: 100%;
+    color: #FFFFFF;
+}
+
+aside p {
+    display: inline-block;
+    font: normal 16px 'Roboto Flex', sans-serif;
+}
+
+aside img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.b-aside {
+    font-style: bold;
+    font-size: 24px;
+}
+
+.du-aside {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.u-aside {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.aside-top {
+    position: relative;
+    width: 75%;
+    left: 25%;
+    top: 10%;
+}
+
+.aside-mid {
+    position: relative;
+    width: 75%;
+    left: 25%;
+    top: 35%;
+}
+
+.aside-mid section {
+    margin-bottom: 10%;
+}
+
+.aside-bottom {
+    position: relative;
+    width: 85%;
+    left: 15%;
+    top: 60%;
+}
+
+.aside-bottom section {
+    margin-bottom: 5%;
 }
 
 /*  Main Section    */
