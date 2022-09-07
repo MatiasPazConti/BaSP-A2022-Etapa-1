@@ -138,7 +138,6 @@ aside img {
     display: inline-block;
     width: 40%;
     margin-bottom: 100px;
-    border: 1px solid orange;
 }
 
 .sec-40p img {
@@ -156,89 +155,91 @@ aside img {
 
 .s03-f {
     position: relative;
-    width: 95%;
-    left: 5%;
+    width: 75%;
+    left: 25%;
     top: 15%;
 }
 
-/*  Section 04  */
-#section-04 fieldset {
-    background-color: #E5E5E5;
-    position: absolute;
-    width: 737px;
-    height: 511px;
-    left: 165px;
-    top: 237px;
-}
-
-#s04-form-box form {
-    position: absolute;
-    left: 79px;
-    top: 113px;
-}
-
-.first-half-label {
-    display: inline-block;
-    width: 255px;
-    height: 33px;
-    margin-right: 19px;
-    margin-bottom: 15px;
-    font: bold 22px 'Roboto Flex', sans-serif;
-    border: 1px solid greenyellow;
-}
-
-.text-input {
-    display: inline-block;
-    width: 255px;
-    height: 33px;
-    margin-bottom: 15px;
-}
-
-#ca-label {
+.s04-h2 {
+    background-color: #FF0000;
     position: relative;
-    bottom: 40px;
+    width: 750px;
+    height: 75px;
+    left: 10%;
+    top: 5%;
+}
+
+.s04-f {
+    background-color: #E5E5E5;
+    position: relative;
+    width: 750px;
+    height: 450px;
+    left: 10%;
+    top: 5%;
+}
+
+.s04-f form {
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+.label-input {
+    width: 600px;
+    margin-bottom: 25px;
+}
+
+.label-input > label {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    margin-right: 20px;
     font: bold 22px 'Roboto Flex', sans-serif;
 }
 
-#radio-section {
+.label-input > input {
+    display: inline-block;
+    width: 250px;
+    height: 25px;
+}
+
+.label-input textarea {
+    display: inline-block;
+    width: 250px;
+    height: 75px;
+}
+
+.radio-section {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+
+.radio-section input {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.radio-section label {
     display: inline-block;
     width: 150px;
-    height: 63px;
-}
-
-.radio-input {
-    display: inline-block;
-}
-
-.radio-label {
-    display: inline-block;
-    width: 120px;
-    height: 20px;
-    font: bold 14px 'Roboto Flex', sans-serif;
+    height: auto;
+    font: bold 16px 'Roboto Flex', sans-serif;
     color: #373867;
 }
 
-#message-label {
-    position: relative;
-    bottom: 123px;
-}
-
-#s04-form textarea {
-    width: 255px;
-    height: 136px;
-}
-
-#form-submit {
+.submit-button {
     background-color: #FF0000;
     position: relative;
-    border-radius: 15px;
-    width: 255px;
+    width: 250px;
     height: 40px;
-    left: 280px;
-    bottom: 20px;
-    font: bold 14px 'Roboto Flex', sans-serif;
-    color: #FFFFFF;
+    left: 275px;
+    bottom: 10px;
     border: 0px;
+    font: bold 16px 'Roboto Flex', sans-serif;
+    color: #FFFFFF;
 }
 
 /*  Section 05  */
