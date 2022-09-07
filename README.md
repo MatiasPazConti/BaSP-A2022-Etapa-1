@@ -12,6 +12,16 @@ Also, it's possible to assign different roles in different projects to the same 
 2. Run index.html file
 ```
 
+## Week 01
+
+In the first week, we used HTML to add the basic elements of Trackgenix's landing page, such as
+tittles, text paragraph, images, lists and a register form.
+
+# Week 02
+
+On this week, we added CSS to our toolkit and started to stylize the previously mentioned elements
+to improve the landing page aesthetics.
+
 Author: Matias Paz Conti
 
-Technology used: HTML
+Technology used: HTML, CSS
