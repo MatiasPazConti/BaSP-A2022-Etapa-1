@@ -11,7 +11,7 @@ header {
     position: absolute;
     width: 686px;
     height: 110px;
-    left: 476px;
+    left: 30%;
     top: 86px;
     font: bold 42px 'Roboto Flex', sans-serif;
     text-align: center;
@@ -154,11 +154,30 @@ aside img {
     top: 15%;
 }
 
+.s02-f h3 {
+    display: block;
+    font: bold 32px 'Roboto Flex', sans-serif;
+    color: black;
+}
+
+.s02-f img {
+    display: inline-block;
+}
+
 .s03-f {
     position: relative;
     width: 75%;
     left: 25%;
     top: 15%;
+    color: black;
+}
+
+.s03-f h3 {
+    font: bold 24px 'Roboto Flex', sans-serif;
+}
+
+.s03-f p {
+    font: normal 14px 'Roboto Flex', sans-serif;
 }
 
 /*  Section 04  */
