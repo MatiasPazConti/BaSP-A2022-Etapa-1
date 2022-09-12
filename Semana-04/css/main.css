@@ -1,0 +1,52 @@
+/*  General */
+main {
+    /*width: 80%;*/ width: 100%;
+    position: relative;
+    /*left: 20%;*/
+    top: 20%;
+    color: white;
+    font: normal 16px 'Roboto Flex', sans-serif;
+    border: 1px solid black;
+}
+
+h2 {
+    background-color: #FF0000;
+    position: relative;
+    width: 40%;
+    height: auto;
+    left: 30%;
+    top: 5%;
+    font: bold 28px 'Roboto Flex', sans-serif;
+    padding: 15px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.main-section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 20%;
+    border: 1px solid green;
+}
+
+.section-01 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 70%;
+    color: black;
+}
+
+.section-01 div {
+    display: flex;
+    justify-content: space-between;
+    height: 45%;
+    border: 1px solid yellow;
+}
+
+.section-01-img {
+    width: 75%;
+    height: 75%;
+}

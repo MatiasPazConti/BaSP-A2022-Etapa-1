@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    font: bold 42px 'Roboto Flex', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width:1023px) {
+    header {
+        width: 80%;
+        height: 10%;
+        left: 20%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    header {
+        width: 100%;
+        height: 20%;
+        left: auto;
+    }
+}
+
+h1 {
+    width: 50%;
+    height: 50%;
+    background-color: #FF0000;
+    border-radius: 15px;
+}
