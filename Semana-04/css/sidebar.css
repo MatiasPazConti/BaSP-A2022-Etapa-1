@@ -2,7 +2,14 @@ aside {
     background-color: #FF0000;
     display: flex;
     flex-wrap: wrap;
+    font: bold 16px 'Roboto Flex', sans-serif;
     /*border: 1px solid black;*/
+}
+
+.aside-line {
+    display: flex;
+    align-items: center;
+    /*border: 1px solid yellow;*/
 }
 
 @media screen and (max-width:1023px) {
@@ -17,8 +24,17 @@ aside {
     aside > section {
         width: 45%;
     }
+    .aside-left {
+        justify-content: flex-end;
+    }
     .aside-hide {
         display: none;
+    }
+    .u-aside {
+        text-decoration-line: none;
+    }
+    .du-aside {
+        text-decoration-line: none;
     }
 }
 
@@ -34,23 +50,18 @@ aside {
     aside > section {
         width: auto;
     }
+    .aside-left {
+        justify-content: flex-start;
+    }
     .aside-hide {
         display: inline-block;
     }
-}
-
-.aside-line {
-    display: flex;
-    align-items: center;
-    /*border: 1px solid yellow;*/
-}
-
-.du-aside {
-    text-decoration-line: underline;
-    text-decoration-style: double;
-}
-
-.u-aside {
-    text-decoration-line: underline;
-    text-decoration-style: solid;
+    .u-aside {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+    }
+    .du-aside {
+        text-decoration-line: underline;
+        text-decoration-style: double;
+    }
 }
