@@ -3,29 +3,6 @@ body {
     height: 100%;
 }
 
-/*  Section 01  */
-.s01-s {
-    display: inline-block;
-    position: relative;
-    left: 200px;
-    top: 350px;
-}
-
-.s01-s p {
-    display: inline-block;
-    position: relative;
-    width: 350px;
-    height: auto;
-    left: 100px;
-    bottom: 100px;
-    font: italic 16px 'Roboto Flex', sans-serif;
-    text-align: center;
-}
-
-.s01-s img {
-    display: inline-block;
-}
-
 /*  Section 02 & Section 03  */
 .sec-40p article {
     display: inline-block;

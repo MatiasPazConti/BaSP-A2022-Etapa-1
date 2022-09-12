@@ -3,13 +3,11 @@ aside {
     display: flex;
     flex-wrap: wrap;
     font: bold 16px 'Roboto Flex', sans-serif;
-    /*border: 1px solid black;*/
 }
 
 .aside-line {
     display: flex;
     align-items: center;
-    /*border: 1px solid yellow;*/
 }
 
 @media screen and (max-width:1023px) {
