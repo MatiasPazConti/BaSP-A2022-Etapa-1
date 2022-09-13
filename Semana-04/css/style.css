@@ -3,59 +3,7 @@ body {
     height: 100%;
 }
 
-/*  Section 02 & Section 03  */
-.sec-40p article {
-    display: inline-block;
-    width: 40%;
-    margin-bottom: 100px;
-}
-
-.sec-40p img {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-}
-
-.s02-f {
-    position: relative;
-    width: 75%;
-    left: 25%;
-    top: 15%;
-}
-
-.s02-f h3 {
-    display: block;
-    font: bold 32px 'Roboto Flex', sans-serif;
-    color: black;
-}
-
-.s02-f img {
-    display: inline-block;
-}
-
-.s03-f {
-    position: relative;
-    width: 75%;
-    left: 25%;
-    top: 15%;
-    color: black;
-    font: normal 14px 'Roboto Flex', sans-serif;
-}
-
-.s03-f h3 {
-    font-size: 24px;
-}
-
 /*  Section 04  */
-.s04-h2 {
-    background-color: #FF0000;
-    position: relative;
-    width: 750px;
-    height: 75px;
-    left: 10%;
-    top: 5%;
-}
-
 .s04-f {
     background-color: #E5E5E5;
     position: relative;
