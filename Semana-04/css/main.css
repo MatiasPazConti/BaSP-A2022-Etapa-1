@@ -3,7 +3,6 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 20%;
     color: black;
     font: normal 14px 'Roboto Flex', sans-serif;
     border: 1px solid black;
@@ -156,11 +155,40 @@ h3 {
     text-align: center;
 }
 
+/*  Section 06  */
+.s06 section {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.s06 h3 {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font: bold 30px 'Roboto Flex', sans-serif;
+    color: #FF0000;
+}
+
+.s06 img {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.s06 li {
+    margin-bottom: 25px;
+    list-style-type: disc;
+    font: bold 14px 'Roboto Flex', sans-serif;
+    color: #747474;
+}
+
 /*  Media Queries   */
 @media screen and (max-width:1023px) {
     main {
         width: 100%;
         left: auto;
+        top: auto;
     }
     h2 {
         width: 100%;
@@ -187,6 +215,7 @@ h3 {
     main {
         width: 80%;
         left: 20%;
+        top: 20%;
     }
     h2 {
         width: 40%;
