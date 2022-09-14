@@ -4,7 +4,8 @@ aside {
     align-items: flex-start;
     width: 100%;
     height: 10%;
-    position: relative;
+    position: fixed;
+    z-index: +1;
     background-color: #FF0000;
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +38,6 @@ aside > section {
         align-items: center;
         width: 20%;
         height: 100%;
-        position: fixed;
     }
     aside > section {
         width: auto;

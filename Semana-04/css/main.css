@@ -4,7 +4,7 @@ main {
     flex-direction: column;
     width: 100%;
     left: auto;
-    top: auto;
+    top: 10%;
     position: relative;
     color: black;
     font: normal 14px 'Roboto Flex', sans-serif;
