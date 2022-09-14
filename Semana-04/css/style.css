@@ -2,3 +2,78 @@ body {
     width: 100%;
     height: 100%;
 }
+/*  Media Queries*/
+@media screen and (min-width: 1024px) {
+    /*  Header  */
+    header {
+        width: 80%;
+        height: 15%;
+        left: 20%;
+    }
+    h1 {
+        width: 50%;
+        border-radius: 15px;
+    }
+    /*  Sidebar */
+    aside {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+    }
+    aside > section {
+        width: auto;
+    }
+    .aside-left {
+        justify-content: flex-start;
+    }
+    .aside-hide {
+        display: inline-block;
+    }
+    .u-aside {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+    }
+    .du-aside {
+        text-decoration-line: underline;
+        text-decoration-style: double;
+    }
+    /*  Main    */
+    main {
+        width: 80%;
+        left: 20%;
+        top: 20%;
+    }
+    h2 {
+        width: 40%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .section-40p article {
+        width: 40%;
+    }
+    .section-04, .section-04-h2 {
+        width: 50%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    form {
+        width: 70%;
+    }
+    .section-05 p {
+        font-size: 14px;
+    }
+    .section-06 article {
+        width: auto;
+    }
+    .extra-hide {
+        display: none;
+    }
+    /*  Footer  */
+    footer {
+        width: 80%;
+        left: 20%;
+        top: 20%;
+    }
+}

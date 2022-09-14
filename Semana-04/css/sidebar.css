@@ -30,30 +30,3 @@ aside > section {
 .du-aside {
     text-decoration-line: none;
 }
-/*  Media Queries*/
-@media screen and (min-width: 1024px) {
-    aside {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 20%;
-        height: 100%;
-    }
-    aside > section {
-        width: auto;
-    }
-    .aside-left {
-        justify-content: flex-start;
-    }
-    .aside-hide {
-        display: inline-block;
-    }
-    .u-aside {
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-    }
-    .du-aside {
-        text-decoration-line: underline;
-        text-decoration-style: double;
-    }
-}
