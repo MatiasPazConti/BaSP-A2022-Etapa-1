@@ -21,6 +21,7 @@ body {
         align-items: center;
         width: 20%;
         height: 100%;
+        color: white;
     }
     aside > section {
         width: auto;
