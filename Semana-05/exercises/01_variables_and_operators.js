@@ -10,7 +10,7 @@ console.log(sumTotal);
 /*  Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.  */
 console.log('\n-Exercise 1.b: ');
 var firstString, secondString, concatenation;
-firstString = 'Ho';
+firstString = 'ho';
 secondString = 'la';
 concatenation = firstString + secondString;
 console.log(concatenation);
@@ -18,7 +18,7 @@ console.log(concatenation);
     string) guardando el resultado de la suma en una 3er variable (utilizar length).    */
 console.log('\n-Exercise 1.c: ');
 var thirdString, fourthString, totalLenght;
-thirdString = 'Hola';
-fourthString = 'Mundo';
+thirdString = 'hola';
+fourthString = 'mundo';
 totalLenght = length(thirdString) + length(fourthString);
 console.log(totalLenght);
