@@ -53,3 +53,18 @@ console.log('Sum:', sumD(n, m));
 /*  Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma probando
     que todo siga funcionando igual.    */
 console.log('\n-Exercise 6.e:');
+function validateOrTrunc(a) {
+    if (validateInteger(a)) {
+        return a;
+    }
+    else {
+        alert('There is an error');
+        return Math.floor(a);
+    }
+}
+function sumE(a, b) {
+    return validateOrTrunc(a) + validateOrTrunc(b);
+}
+n = Math.random() * 10;
+m = Math.random() * 10;
+console.log('Sum:', sumE(n, m));
