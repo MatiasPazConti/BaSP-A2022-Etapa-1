@@ -1,4 +1,5 @@
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,14 +7,13 @@ header {
     height: 10%;
     left: auto;
     top: 10%;
-    position: relative;
     font: bold 42px 'Roboto Flex', sans-serif;
     text-align: center;
     color: white;
 }
 h1 {
-    background-color: #FF0000;
     width: 100%;
-    border-radius: 0px;
     padding: 15px;
+    background-color: #FF0000;
+    border-radius: 0px;
 }

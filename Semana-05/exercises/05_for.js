@@ -3,7 +3,7 @@ console.log('--EXERCISE 05: FOR');
     una alerta utilizando cada una de las palabras. */
 console.log('\n-Exercise 5.a:');
 var array = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
-var toDisplay;
+var toDisplay = '';
 for (let i = 0; i < 5; i++) {
     toDisplay = toDisplay + array[i] + ' ';
 }
