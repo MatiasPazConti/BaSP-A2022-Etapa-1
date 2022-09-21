@@ -25,6 +25,11 @@ to improve the landing page aesthetics.
 
 During this week, we started to implement flexbox and media queries to Trackgenix, changin almost every position propiety with flexbox propieties.
 
+# Week 05
+
+The 5th week consisted in a basic JavaScript introduction, which was made with a new index.html completely appart from
+the Trackgenix app.
+
 Author: Matias Paz Conti
 
-Technology used: HTML, CSS
+Technology used: HTML, CSS, JavaScript
