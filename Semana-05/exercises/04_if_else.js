@@ -36,9 +36,9 @@ else if ((age > 30) && (age <= 60)) {
     alert('Adult');
 }
 else if ((age > 60) && (age <= 75)) {
-    alert('Adulto mayor');
+    alert('Older adult');
 }
 else {
-    alert('Anciano');
+    alert('Elderly');
 }
 console.log('Age:', age);
