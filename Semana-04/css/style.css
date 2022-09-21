@@ -40,6 +40,9 @@ body {
         text-decoration-line: underline;
         text-decoration-style: double;
     }
+    .menu-hamburger {
+        display: none;
+    }
     /*  Main    */
     main {
         width: 80%;
