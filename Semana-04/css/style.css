@@ -54,6 +54,9 @@ body {
         padding-left: 2.5%;
         padding-right: 2.5%;
     }
+    .section-01 div {
+        flex-direction: row;
+    }
     .section-40p article {
         width: 40%;
     }

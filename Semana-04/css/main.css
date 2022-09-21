@@ -43,6 +43,7 @@ h3 {
 }
 .section-01 div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -51,11 +52,11 @@ h3 {
 }
 .section-01-item {
     flex: 1;
-    margin: 5%;
+    margin: 7.5%;
     font-style: italic;
 }
 .section-01 img {
-    width: 75%; 
+    width: 75%;
 }
 /*  Tab-Row Sections  */
 .tab-row {
