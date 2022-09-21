@@ -48,16 +48,16 @@ body {
     }
     h2 {
         width: 40%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
     }
     .section-40p article {
         width: 40%;
     }
     .section-04, .section-04-h2 {
         width: 50%;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
     }
     form {
         width: 70%;

@@ -21,11 +21,11 @@ main {
 }
 h2 {
     width: 100%;
-    margin-bottom: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 2.5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     background-color: #FF0000;
     /*border: 1px solid yellow;*/
     font: bold 28px 'Roboto Flex', sans-serif;
@@ -33,7 +33,7 @@ h2 {
     color: white;
 }
 h3 {
-    margin-bottom: 5px;
+    margin-bottom: 1%;
     font: bold 24px 'Roboto Flex', sans-serif;
 }
 /*  Section 01  */
@@ -51,7 +51,7 @@ h3 {
 }
 .section-01-item {
     flex: 1;
-    margin: 25px;
+    margin: 5%;
     font-style: italic;
 }
 .section-01 img {
@@ -61,7 +61,7 @@ h3 {
 .tab-row {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 2%;
 }
 .tab-row section {
     display: flex;
@@ -71,11 +71,11 @@ h3 {
 .tab-row article {
     display: flex;
     align-items: center;
-    margin: 15px;
+    margin: 5%;
 }
 .tab-row img {
     width: 25%;
-    margin-right: 10px;
+    margin-right: 5%;
 }
 /*  Section 40%*/
 .section-40p article {
@@ -84,21 +84,21 @@ h3 {
 /*  Section 04  */
 .section-04-h2 {
     width: 100%;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 .section-04 {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     background-color: #E5E5E5;
 }
 form {
@@ -109,7 +109,7 @@ form {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
     font: bold 16px 'Roboto Flex', sans-serif;
 }
 .form-input {
@@ -123,7 +123,7 @@ form {
 }
 .form-button {
     width: 40%;
-    padding: 10px;
+    padding: 2.5%;
     background-color: #FF0000;
     border: 0px;
     font: bold 16px 'Roboto Flex', sans-serif;
@@ -139,14 +139,14 @@ form {
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin: 5px;
+    margin: 1%;
 }
 .section-05 h3 {
     font: bold 24px 'Rokkitt', serif;
     color: black;
 }
 .section-05 p {
-    padding: 10px;
+    padding: 5%;
     background-color: #00000080;
     border-radius: 30px;
     font-size: 8px;
@@ -169,14 +169,14 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 15%;
 }
 .section-06 h3 {
     font: bold 28px 'Roboto Flex', sans-serif;
     color: #FF0000;
 }
 .section-06 li {
-    margin-bottom: 15px;
+    margin-bottom: 20%;
     color: #747474;
     list-style-type: disc;
 }
@@ -185,7 +185,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    margin: 10%;
+    margin: 1.5%;
     background-color: #FF5454;
 }
 .section-extra h3 {
@@ -193,10 +193,10 @@ form {
 }
 .section-extra > div {
     width: 90%;
-    margin: 15px;
+    margin: 5%;
 }
 .section-extra img {
-    margin-right: 10px;
+    margin-right: 5%;
 }
 .extra-hide {
     display: flex;

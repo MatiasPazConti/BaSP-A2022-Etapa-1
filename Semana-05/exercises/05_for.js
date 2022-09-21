@@ -3,9 +3,8 @@ console.log('--EXERCISE 05: FOR');
     una alerta utilizando cada una de las palabras. */
 console.log('\n-Exercise 5.a:');
 var array = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
-var toDisplay = '';
 for (let i = 0; i < 5; i++) {
-    alert(toDisplay);
+    alert(array[i]);
 }
 console.log('Array:', array);
 /*  Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra
