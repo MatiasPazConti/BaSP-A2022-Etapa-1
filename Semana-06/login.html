@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+    </style>
+    <title>
+        Log In
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <header>
@@ -17,11 +24,13 @@
             <h2>
                 Sing In
             </h2>
-            <fieldset>
-                <input type="text" value="Username">
-            </fieldset>
-            <fieldset>
-                <input type="text" value="Password">
+            <fieldset class="field-01">
+                <div>
+                    <input type="text" value="Username" class="login-input">
+                </div>
+                <div>
+                    <input type="text" value="Password" class="login-input">
+                </div>
             </fieldset>
             <fieldset>
                 <input type="checkbox">
@@ -29,7 +38,7 @@
                     Remember me
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="field-03">
                 <label>
                     Register here
                 </label>
@@ -37,8 +46,8 @@
                     Forgot your password?
                 </label>
             </fieldset>
-            <fieldset>
-                <input type="submit" value="Continue">
+            <fieldset class="field-04">
+                <input type="submit" value="Continue" class="login-button">
             </fieldset>
         </form>
     </main>
