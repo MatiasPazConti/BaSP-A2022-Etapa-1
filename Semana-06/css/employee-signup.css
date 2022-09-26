@@ -1,25 +1,16 @@
 body {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-header {
-    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10%;
-    background-color: #FF0000;
-    font: bold 42px 'Abel', sans-serif;
-    color: white;
+    height: 100%;
 }
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
     font: bold 16px 'Abel', sans-serif;
     color: black;
 }
@@ -27,40 +18,36 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 75%;
-    height: 70%;
-    padding: 7.5%;
+    width: 80%;
+    height: 75%;
+    padding: 2.5%;
     box-shadow: 7.5px 7.5px 5px #00000080;
 }
 h2 {
     display: flex;
     justify-content: center;
     font-size: 32px;
-    margin-bottom: 15%;
 }
 fieldset {
     display: flex;
+    justify-content: space-around;
     align-items: flex-end;
     height: 12.5%;
 }
-.field-01 {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 40%;
+    height: 100%;
+}
+.text-input {
     width: 100%;
-    border-bottom: 1px solid #FF0000;
+    height: 30%;
 }
-.login-input {
-    border: 0px;
-    font: bold 16px 'Abel', sans-serif;
-}
-.field-03 {
-    justify-content: space-between;
-}
-.login-button {
-    width: 100%;
+.signup-button {
+    width: 40%;
     height: 60%;
     border: 0px;
     border-radius: 5px;
@@ -69,17 +56,16 @@ div {
     color: white;
 }
 @media screen and (min-width: 1024px) {
-    header {
-        display: flex;
-    }
     main {
         height: 80%;
     }
     form {
-        width: 20%;
-        padding: 2.5%;
+        width: 40%;
     }
     fieldset {
         height: 20%;
+    }
+    .signup-button {
+        width: 25%;
     }
 }
