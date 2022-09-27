@@ -57,6 +57,7 @@ section {
 }
 .date-input {
     width: 25%;
+    font: normal 16px 'Abel', sans-serif;
 }
 .signup-button {
     width: 40%;

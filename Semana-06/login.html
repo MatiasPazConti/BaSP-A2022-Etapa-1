@@ -12,6 +12,7 @@
     </title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./javascript/login.js"></script>
 </head>
 <body>
     <header>
@@ -25,12 +26,16 @@
                 Sing In
             </h2>
             <fieldset class="field-01">
-                <div>
-                    <input type="text" value="Username" class="login-input">
-                </div>
-                <div>
-                    <input type="password" value="Password" class="login-input">
-                </div>
+                <section id="user-section">
+                    <div>
+                        <input type="text" value="Username" class="login-input">
+                    </div>
+                </section>
+                <section id="pass-section">
+                    <div>
+                        <input type="text" value="Password" class="login-input">
+                    </div>
+                </section>
             </fieldset>
             <fieldset>
                 <input type="checkbox">
