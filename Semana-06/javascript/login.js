@@ -1,3 +1,46 @@
+//  errorFocus
+function errorFocus(section) {
+    var errorLabel = section.querySelector('.error-label');
+    if (errorLabel != null) {
+        section.removeChild(errorLabel);
+        delete errorLabel;
+    }
+}
+//  errorBlur
+function errorBlur(section, input) {
+    var errorLabel = document.createElement('label');
+    errorLabel.classList.add('error-label');
+    if (input.value == '') {
+        errorLabel.innerHTML = 'Required field';
+        section.appendChild(errorLabel);
+    }
+    else if (section.getAttribute('id') == 'user-section') {
+        var emailValidation = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+        if (!emailValidation.test(input.value)) {
+            errorLabel.innerHTML = 'Invalid email';
+            section.appendChild(errorLabel);
+        }
+        else {
+            delete errorLabel;
+        }
+    }
+    else if (section.getAttribute('id') == 'pass-section') {
+        var passValidation = /^[a-z0-9]+$/i;
+        console.log(input.value);
+        console.log(input.value.length);
+        if ((input.value.length < 8) || (input.value.length > 16) || !passValidation.test(input.value))
+        {
+            errorLabel.innerHTML = 'Invalid password';
+            section.appendChild(errorLabel);
+        }
+        else {
+            delete errorLabel;
+        }
+    }
+    else {
+        delete errorLabel;
+    }
+}
 window.onload = function() {
     //  Username Functions
     const userSection = document.getElementById('user-section');
@@ -5,19 +48,10 @@ window.onload = function() {
     userInput.onfocus = function() {
         userInput.setAttribute('value', '');
         userInput.classList.add('color-black');
-        var userLabel = userSection.querySelector('label');
-        if (userLabel != undefined) {
-            userSection.removeChild(userLabel);
-        }
+        errorFocus(userSection);
     }
     userInput.onblur = function() {
-        var userLabel = document.createElement('label');
-        userLabel.classList.add('error-label');
-        var userInput = userSection.querySelector('input');
-        if (userInput.value == '') {
-            userLabel.innerHTML = 'Required field';
-            userSection.appendChild(userLabel);
-        }
+        errorBlur(userSection, userInput);
     }
     //  Password Functions
     const passSection = document.getElementById('pass-section');
@@ -26,19 +60,10 @@ window.onload = function() {
         passInput.setAttribute('type', 'password');
         passInput.setAttribute('value', '');
         passInput.classList.add('color-black');
-        var passLabel = passSection.querySelector('label');
-        if (passLabel != undefined) {
-            passSection.removeChild(passLabel);
-        }
+        errorFocus(passSection);
     }
     passInput.onblur = function() {
-        var passLabel = document.createElement('label');
-        passLabel.classList.add('error-label');
-        var passInput = passSection.querySelector('input');
-        if (passInput.value == '') {
-            passLabel.innerHTML = 'Required field';
-            passSection.appendChild(passLabel);
-        }
+        errorBlur(passSection, passInput);
     }
     //  Login-Button
     const loginButton = document.querySelector('.login-button');

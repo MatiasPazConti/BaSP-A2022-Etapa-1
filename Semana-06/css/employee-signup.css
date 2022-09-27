@@ -68,6 +68,10 @@ section {
     font: bold 16px 'Abel', sans-serif;
     color: white;
 }
+.error-label {
+    font: bold 14px 'Abel', sans-serif;
+    color: #FF0000;
+}
 @media screen and (min-width: 1024px) {
     main {
         height: 80%;
