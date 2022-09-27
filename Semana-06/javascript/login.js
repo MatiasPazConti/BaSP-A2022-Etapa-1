@@ -23,6 +23,7 @@ window.onload = function() {
     const passSection = document.getElementById('pass-section');
     const passInput = passSection.querySelector('input');
     passInput.onfocus = function() {
+        passInput.setAttribute('type', 'password');
         passInput.setAttribute('value', '');
         passInput.classList.add('color-black');
         var passLabel = passSection.querySelector('label');
