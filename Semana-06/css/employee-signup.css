@@ -44,6 +44,10 @@ div {
     height: 100%;
     margin-bottom: 5%;
 }
+section {
+    height: 100%;
+    width: 100%;
+}
 .email-div {
     width: 90%;
 }
