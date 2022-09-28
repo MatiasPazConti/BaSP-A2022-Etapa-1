@@ -82,6 +82,10 @@ div {
     font: bold 14px 'Abel', sans-serif;
     color: #FF0000;
 }
+a {
+    color: black;
+    text-decoration-line: none;
+}
 @media screen and (min-width: 1024px) {
     header {
         display: flex;

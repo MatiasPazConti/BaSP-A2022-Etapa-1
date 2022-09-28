@@ -11,6 +11,9 @@ aside {
     font: bold 16px 'Roboto Flex', sans-serif;
     z-index: +1;
 }
+a {
+    text-decoration-line: none;
+}
 .aside-line {
     display: flex;
     align-items: center;

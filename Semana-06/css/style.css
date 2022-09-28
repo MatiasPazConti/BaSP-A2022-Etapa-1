@@ -23,6 +23,9 @@ body {
         height: 100%;
         color: white;
     }
+    a {
+        color: white;
+    }
     aside > section {
         width: auto;
     }
