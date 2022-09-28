@@ -57,6 +57,7 @@ function errorBlur(section, input) {
     else if (section.getAttribute('id') == 'birth-section')
     {
         //  Birth-Date
+        delete errorLabel;
     }
     else if (section.getAttribute('id') == 'phone-section')
     {
@@ -66,7 +67,7 @@ function errorBlur(section, input) {
             phoneValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
         }
         if ((input.value.length <= 10) || !phoneValidation) {
-            errorLabel.innerHTML = 'Invalid documment';
+            errorLabel.innerHTML = 'Invalid number';
             section.appendChild(errorLabel);
         }
         else
@@ -271,9 +272,42 @@ window.onload = function () {
         }
     }
     //  Submit-Button
-    const loginButton = document.querySelector('.login-button');
-    loginButton.onclick = function(f) {
+    const signButton = document.querySelector('.signup-button');
+    signButton.onclick = function(f) {
         f.preventDefault();
+        //  First-Name
+        errorFocus(fNameSection);
+        errorBlur(fNameSection, fNameInput);
+        //  Last-Name
+        errorFocus(lNameSection);
+        errorBlur(lNameSection, lNameInput);
+        //  Documment
+        errorFocus(docSection);
+        errorBlur(docSection, docInput);
+        //  Birth-Date
+        errorFocus(birthSection);
+        errorBlur(birthSection, birthInput);
+        //  Phone
+        errorFocus(phoneSection);
+        errorBlur(phoneSection, phoneInput);
+        //  Adress
+        errorFocus(dirSection);
+        errorBlur(dirSection, dirInput);
+        //  Town
+        errorFocus(townSection);
+        errorBlur(townSection, townInput);
+        //  Postal-Code
+        errorFocus(postalSection);
+        errorBlur(postalSection, postalInput);
+        //  Email
+        errorFocus(emailSection);
+        errorBlur(emailSection, emailInput);
+        //  Password
+        errorFocus(passSection);
+        errorBlur(passSection, passInput);
+        //  Repeat-Password
+        errorFocus(rPassSection);
+        errorBlur(rPassSection, rPassInput);
         if ((document.querySelector('.error-label') != null)) {
             alert('There is an invalid field!');
         }
