@@ -28,7 +28,7 @@ console.log('15 + 4,5:', sumB(15, 4.5));
     número entero.  */
 console.log('\n-Exercise 6.c:');
 function validateInteger(a) {
-    return (a - Math.floor(a) == 0);
+    return Number.isInteger(a);
 }
 console.log('Validation of 4:', validateInteger(4));
 console.log('Validation of 4.5:', validateInteger(4.5));

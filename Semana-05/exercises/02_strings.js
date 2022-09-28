@@ -46,5 +46,5 @@ var thirdSubstringF = firstStringF.substring(ocurrencePosF + 1, ocurrencePosF + 
 var fourthSubstringF = firstStringF.substring(ocurrencePosF + 2);
 //Concatenation
 var returnF = firstSubstringF.toUpperCase() + secondSubstringF.toLowerCase() + ' '
-            + thirdSubstringF.toUpperCase() + fourthSubstringF.toLowerCase();
++ thirdSubstringF.toUpperCase() + fourthSubstringF.toLowerCase();
 console.log('String:', returnF);
