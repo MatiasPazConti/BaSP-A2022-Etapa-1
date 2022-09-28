@@ -1,4 +1,5 @@
 //  Alphanumeric CONST
+const EMPTYSPACE = ' ';
 const NUMBERS = '1234567890';
 const LETTERS = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 //  errorFocus FUNCTION
@@ -17,10 +18,9 @@ function errorBlur(section, input) {
         errorLabel.innerHTML = 'Required field';
         section.appendChild(errorLabel);
     }
-    else if ((section.getAttribute('id') == 'fname-section') || (section.getAttribute('id') == 'lname-section'))
-    {
-        //  First-Name & Last-Name
-        const EMPTYSPACE = ' ';
+    else if ((section.getAttribute('id') == 'fname-section') || (section.getAttribute('id') == 'lname-section') ||
+    (section.getAttribute('id') == 'town-section')) {
+        //  First-Name & Last-Name & Town
         var nameValidation = true;
         for (i = 0; nameValidation && (i < input.value.length); i++){
             nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1) || (input.value.charAt(i) == EMPTYSPACE);
@@ -41,6 +41,18 @@ function errorBlur(section, input) {
     else if (section.getAttribute('id') == 'doc-section')
     {
         //  Documment
+        var docValidation = true;
+        for (i = 0; docValidation && (i < input.value.length); i++) {
+            docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+        }
+        if ((input.value.length <= 7) || !docValidation) {
+            errorLabel.innerHTML = 'Invalid documment';
+            section.appendChild(errorLabel);
+        }
+        else
+        {
+            delete errorLabel;
+        }
     }
     else if (section.getAttribute('id') == 'birth-section')
     {
@@ -49,18 +61,63 @@ function errorBlur(section, input) {
     else if (section.getAttribute('id') == 'phone-section')
     {
         //  Phone-Number
+        var phoneValidation = true;
+        for (i = 0; phoneValidation && (i < input.value.length); i++) {
+            phoneValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+        }
+        if ((input.value.length <= 10) || !phoneValidation) {
+            errorLabel.innerHTML = 'Invalid documment';
+            section.appendChild(errorLabel);
+        }
+        else
+        {
+            delete errorLabel;
+        }
     }
     else if (section.getAttribute('id') == 'dir-section')
     {
-        //  Direction
-    }
-    else if (section.getAttribute('id') == 'town-section')
-    {
-        //  Town
+        //  Adress
+        var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
+        if (firstSpace == -1) {
+            errorLabel.innerHTML = 'Invalid adress';
+            section.appendChild(errorLabel);
+        }
+        else
+        {
+            var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
+            var moreSpaces = input.value.indexOf(EMPTYSPACE, firstSpace + 1) != -1;
+            var dirValidation = true;
+            for (i = 0; dirValidation && (i < firstSpace); i++) {
+                dirValidation = LETTERS.indexOf(input.value.charAt(i), 0) != -1;    
+            }
+            for (i = firstSpace + 1; dirValidation && (i < input.value.length); i++) {
+                dirValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;    
+            }
+            if ((input.value.length < 5) || !dirValidation || invalidSpace || moreSpaces) {
+                errorLabel.innerHTML = 'Invalid adress';
+                section.appendChild(errorLabel);
+            }
+            else
+            {
+                delete errorLabel;
+            }
+        }
     }
     else if (section.getAttribute('id') == 'postal-section')
     {
         //  Postal-Code
+        var postalValidation = true;
+        for (i = 0; postalValidation && (i < input.value.length); i++) {
+            docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+        }
+        if ((input.value.length < 4) || (input.value.length > 5) || !docValidation) {
+            errorLabel.innerHTML = 'Invalid code';
+            section.appendChild(errorLabel);
+        }
+        else
+        {
+            delete errorLabel;
+        }
     }
     else if (section.getAttribute('id') == 'email-section')
     {
