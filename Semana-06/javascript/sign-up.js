@@ -85,7 +85,6 @@ function errorBlur(section, input) {
         else
         {
             var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
-            var moreSpaces = input.value.indexOf(EMPTYSPACE, firstSpace + 1) != -1;
             var dirValidation = true;
             for (i = 0; dirValidation && (i < firstSpace); i++) {
                 dirValidation = LETTERS.indexOf(input.value.charAt(i), 0) != -1;    
@@ -93,7 +92,7 @@ function errorBlur(section, input) {
             for (i = firstSpace + 1; dirValidation && (i < input.value.length); i++) {
                 dirValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;    
             }
-            if ((input.value.length < 5) || !dirValidation || invalidSpace || moreSpaces) {
+            if ((input.value.length < 5) || !dirValidation || invalidSpace) {
                 errorLabel.innerHTML = 'Invalid adress';
                 section.appendChild(errorLabel);
             }
@@ -269,6 +268,17 @@ window.onload = function () {
         errorBlur(rPassSection, rPassInput);
         if (rPassSection.querySelector('.error-label') == null) {
             errorRepeat(passSection, rPassSection);
+        }
+    }
+    //  Submit-Button
+    const loginButton = document.querySelector('.login-button');
+    loginButton.onclick = function(f) {
+        f.preventDefault();
+        if ((document.querySelector('.error-label') != null)) {
+            alert('There is an invalid field!');
+        }
+        else {
+            alert('Successfully submited!');
         }
     }
 }

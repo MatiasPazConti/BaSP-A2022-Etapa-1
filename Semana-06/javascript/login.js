@@ -69,9 +69,19 @@ window.onload = function() {
     const loginButton = document.querySelector('.login-button');
     loginButton.onclick = function(f) {
         f.preventDefault();
-        var userInput = userSection.querySelector('input');
-        console.log('Username:', userInput.value);
-        var passInput = passSection.querySelector('input');
-        console.log('Password:', passInput.value);
+        //  Username
+        userInput.setAttribute('value', '');
+        errorFocus(userSection);
+        errorBlur(userSection, userInput);
+        //  Password
+        passInput.setAttribute('value', '');
+        errorFocus(passSection);
+        errorBlur(passSection, passInput);
+        if ((document.querySelector('.error-label') != null)) {
+            alert('There is an invalid field!');
+        }
+        else {
+            alert('Successfully loged in!');
+        }
     }
 }
