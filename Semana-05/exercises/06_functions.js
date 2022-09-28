@@ -14,7 +14,7 @@ console.log('15 + 4,5:', sumTotal);
     como resultado. */
 console.log('\n-Exercise 6.b:');
 function sumB(a, b) {
-    if ((a - Math.floor(a) > 0) || (b - Math.floor(b) > 0)) {
+    if (Number.isInteger(a) || Number.isInteger(b)) {
         alert('There is an error');
         return NaN;
     }
