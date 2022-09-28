@@ -1,3 +1,6 @@
+//  Alphanumeric CONST
+const NUMBERS = '1234567890';
+const LETTERS = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 //  errorFocus FUNCTION
 function errorFocus(section) {
     var errorLabel = section.querySelector('.error-label');
@@ -14,13 +17,26 @@ function errorBlur(section, input) {
         errorLabel.innerHTML = 'Required field';
         section.appendChild(errorLabel);
     }
-    else if (section.getAttribute('id') == 'fname-section')
+    else if ((section.getAttribute('id') == 'fname-section') || (section.getAttribute('id') == 'lname-section'))
     {
-        //  First-Name
-    }
-    else if (section.getAttribute('id') == 'lname-section')
-    {
-        //  Last-Name
+        //  First-Name & Last-Name
+        const EMPTYSPACE = ' ';
+        var nameValidation = true;
+        for (i = 0; nameValidation && (i < input.value.length); i++){
+            nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1) || (input.value.charAt(i) == EMPTYSPACE);
+        }
+        var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
+        if (firstSpace != -1) {
+            var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
+            var moreSpaces = input.value.indexOf(EMPTYSPACE, firstSpace + 1) != -1;
+        }
+        if ((input.value.length <= 3) || !nameValidation || ((firstSpace != -1) && (invalidSpace || moreSpaces))) {
+            errorLabel.innerHTML = 'Invalid name';
+            section.appendChild(errorLabel);
+        }
+        else {
+            delete errorLabel;
+        }
     }
     else if (section.getAttribute('id') == 'doc-section')
     {
@@ -60,7 +76,7 @@ function errorBlur(section, input) {
     }
     else if ((section.getAttribute('id') == 'pass-section') || (section.getAttribute('id') == 'rpass-section'))
     {
-        //  Password
+        //  Password & Repeat-Password
         var passValidation = /^[a-z0-9]+$/i;
         console.log(input.value);
         console.log(input.value.length);
