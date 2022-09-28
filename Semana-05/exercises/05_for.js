@@ -2,7 +2,7 @@ console.log('--EXERCISE 05: FOR');
 /*  Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar
     una alerta utilizando cada una de las palabras. */
 console.log('\n-Exercise 5.a:');
-var array = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
+var array = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 for (let i = 0; i < 5; i++) {
     alert(array[i]);
 }
