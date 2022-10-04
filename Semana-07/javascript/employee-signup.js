@@ -18,136 +18,122 @@ function errorBlur(section, input) {
         errorLabel.innerHTML = 'Required field';
         section.appendChild(errorLabel);
     }
-    else if ((section.getAttribute('id') == 'fname-section') || (section.getAttribute('id') == 'lname-section') ||
-    (section.getAttribute('id') == 'town-section')) {
-        //  First-Name & Last-Name & Town
-        var nameValidation = true;
-        for (i = 0; nameValidation && (i < input.value.length); i++){
-            nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1) || (input.value.charAt(i) == EMPTYSPACE);
-        }
-        var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
-        if (firstSpace != -1) {
-            var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
-            var moreSpaces = input.value.indexOf(EMPTYSPACE, firstSpace + 1) != -1;
-        }
-        if ((input.value.length <= 3) || !nameValidation || ((firstSpace != -1) && (invalidSpace || moreSpaces))) {
-            errorLabel.innerHTML = 'Invalid name';
-            section.appendChild(errorLabel);
-        }
-        else {
-            delete errorLabel;
-        }
-    }
-    else if (section.getAttribute('id') == 'doc-section')
-    {
-        //  Documment
-        var docValidation = true;
-        for (i = 0; docValidation && (i < input.value.length); i++) {
-            docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
-        }
-        if ((input.value.length <= 7) || !docValidation) {
-            errorLabel.innerHTML = 'Invalid documment';
-            section.appendChild(errorLabel);
-        }
-        else
-        {
-            delete errorLabel;
-        }
-    }
-    else if (section.getAttribute('id') == 'birth-section')
-    {
-        //  Birth-Date
-        delete errorLabel;
-    }
-    else if (section.getAttribute('id') == 'phone-section')
-    {
-        //  Phone-Number
-        var phoneValidation = true;
-        for (i = 0; phoneValidation && (i < input.value.length); i++) {
-            phoneValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
-        }
-        if ((input.value.length <= 10) || !phoneValidation) {
-            errorLabel.innerHTML = 'Invalid number';
-            section.appendChild(errorLabel);
-        }
-        else
-        {
-            delete errorLabel;
-        }
-    }
-    else if (section.getAttribute('id') == 'dir-section')
-    {
-        //  Adress
-        var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
-        if (firstSpace == -1) {
-            errorLabel.innerHTML = 'Invalid adress';
-            section.appendChild(errorLabel);
-        }
-        else
-        {
-            var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
-            var dirValidation = true;
-            for (i = 0; dirValidation && (i < firstSpace); i++) {
-                dirValidation = LETTERS.indexOf(input.value.charAt(i), 0) != -1;    
-            }
-            for (i = firstSpace + 1; dirValidation && (i < input.value.length); i++) {
-                dirValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;    
-            }
-            if ((input.value.length < 5) || !dirValidation || invalidSpace) {
-                errorLabel.innerHTML = 'Invalid adress';
-                section.appendChild(errorLabel);
-            }
-            else
-            {
-                delete errorLabel;
-            }
-        }
-    }
-    else if (section.getAttribute('id') == 'postal-section')
-    {
-        //  Postal-Code
-        var postalValidation = true;
-        for (i = 0; postalValidation && (i < input.value.length); i++) {
-            docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
-        }
-        if ((input.value.length < 4) || (input.value.length > 5) || !docValidation) {
-            errorLabel.innerHTML = 'Invalid code';
-            section.appendChild(errorLabel);
-        }
-        else
-        {
-            delete errorLabel;
-        }
-    }
-    else if (section.getAttribute('id') == 'email-section')
-    {
-        //  Email
-        var emailValidation = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-        if (!emailValidation.test(input.value)) {
-            errorLabel.innerHTML = 'Invalid email';
-            section.appendChild(errorLabel);
-        }
-        else {
-            delete errorLabel;
-        }
-    }
-    else if ((section.getAttribute('id') == 'pass-section') || (section.getAttribute('id') == 'rpass-section'))
-    {
-        //  Password & Repeat-Password
-        var passValidation = /^[a-z0-9]+$/i;
-        console.log(input.value);
-        console.log(input.value.length);
-        if ((input.value.length < 8) || (input.value.length > 16) || !passValidation.test(input.value))
-        {
-            errorLabel.innerHTML = 'Invalid password';
-            section.appendChild(errorLabel);
-        }
-        else {
-            delete errorLabel;
-        }
-    }
     else {
-        delete errorLabel;
+        switch (section.getAttribute('id')) {
+            case 'fname-section':
+            case 'lname-section':
+                var nameValidation = true;
+                for (i = 0; nameValidation && (i < input.value.length); i++){
+                    nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1) || (input.value.charAt(i) == EMPTYSPACE);
+                }
+                var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
+                if (firstSpace != -1) {
+                    var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
+                    var moreSpaces = input.value.indexOf(EMPTYSPACE, firstSpace + 1) != -1;
+                }
+                if ((input.value.length <= 3) || !nameValidation || ((firstSpace != -1) && (invalidSpace || moreSpaces))) {
+                    errorLabel.innerHTML = 'Invalid name';
+                    section.appendChild(errorLabel);
+                }
+                else {
+                    delete errorLabel;
+                }
+                break;
+            case 'doc-section':
+                var docValidation = true;
+                for (i = 0; docValidation && (i < input.value.length); i++) {
+                    docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+                }
+                if ((input.value.length <= 7) || !docValidation) {
+                    errorLabel.innerHTML = 'Invalid documment';
+                    section.appendChild(errorLabel);
+                }
+                else
+                {
+                    delete errorLabel;
+                }
+                break;    
+            case 'phone-section':
+                var phoneValidation = true;
+                for (i = 0; phoneValidation && (i < input.value.length); i++) {
+                    phoneValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+                }
+                if ((input.value.length <= 10) || !phoneValidation) {
+                    errorLabel.innerHTML = 'Invalid number';
+                    section.appendChild(errorLabel);
+                }
+                else
+                {
+                    delete errorLabel;
+                }
+                break;
+            case 'dir-section':
+                var firstSpace = input.value.indexOf(EMPTYSPACE, 0);
+                if (firstSpace == -1) {
+                    errorLabel.innerHTML = 'Invalid adress';
+                    section.appendChild(errorLabel);
+                }
+                else
+                {
+                    var invalidSpace = (firstSpace == 0) || (firstSpace == input.value.length - 1);
+                    var dirValidation = true;
+                    for (i = 0; dirValidation && (i < firstSpace); i++) {
+                        dirValidation = LETTERS.indexOf(input.value.charAt(i), 0) != -1;    
+                    }
+                    for (i = firstSpace + 1; dirValidation && (i < input.value.length); i++) {
+                        dirValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;    
+                    }
+                    if ((input.value.length < 5) || !dirValidation || invalidSpace) {
+                        errorLabel.innerHTML = 'Invalid adress';
+                        section.appendChild(errorLabel);
+                    }
+                    else
+                    {
+                        delete errorLabel;
+                    }
+                }
+                break;
+            case 'postal-section':
+                var postalValidation = true;
+                for (i = 0; postalValidation && (i < input.value.length); i++) {
+                    docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+                }
+                if ((input.value.length < 4) || (input.value.length > 5) || !docValidation) {
+                    errorLabel.innerHTML = 'Invalid code';
+                    section.appendChild(errorLabel);
+                }
+                else
+                {
+                    delete errorLabel;
+                }
+                break;
+            case 'email-section':
+                var emailValidation = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+                if (!emailValidation.test(input.value)) {
+                    errorLabel.innerHTML = 'Invalid email';
+                    section.appendChild(errorLabel);
+                }
+                else {
+                    delete errorLabel;
+                }
+                break;
+            case 'pass-section':
+            case 'rpass-section':
+                var passValidation = /^[a-z0-9]+$/i;
+                console.log(input.value);
+                console.log(input.value.length);
+                if ((input.value.length < 8) || (input.value.length > 16) || !passValidation.test(input.value))
+                {
+                    errorLabel.innerHTML = 'Invalid password';
+                    section.appendChild(errorLabel);
+                }
+                else {
+                    delete errorLabel;
+                }
+                break;
+            default:
+                delete errorLabel;
+        }
     }
 }
 //  errorRepeat FUNCTION
