@@ -165,14 +165,6 @@ function changeDateStructure(date) {
     var dateArray = date.split('-');
     return dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
 }
-function adjustInput(section, input) {
-    if (section.querySelector('.error-label') != null) {
-        input.classList.add('error-input');
-    }
-    else if (section.querySelector('.error-input') != null) {
-        input.classList.remove('error-input');
-    }
-}
 window.onload = function () {
     var validations = [false, false, false, false, false, false, false, false, false, false, false];
 
@@ -180,107 +172,87 @@ window.onload = function () {
     const fNameInput = fNameSection.querySelector('input');
     fNameInput.onfocus = function() {
         errorFocus(fNameSection);
-        adjustInput(fNameSection, fNameInput);
     }
     fNameInput.onblur = function() {
         validations[0] = errorBlur(fNameSection, fNameInput);
-        adjustInput(fNameSection, fNameInput);
     }
 
     const lNameSection = document.getElementById('lname-section');
     const lNameInput = lNameSection.querySelector('input');
     lNameInput.onfocus = function() {
         errorFocus(lNameSection);
-        adjustInput(lNameSection, lNameInput);
     }
     lNameInput.onblur = function() {
         validations[1] = errorBlur(lNameSection, lNameInput);
-        adjustInput(lNameSection, lNameInput);
     }
 
     const docSection = document.getElementById('doc-section');
     const docInput = docSection.querySelector('input');
     docInput.onfocus = function() {
         errorFocus(docSection);
-        adjustInput(docSection, docInput);
     }
     docInput.onblur = function() {
         validations[2] = errorBlur(docSection, docInput);
-        adjustInput(docSection, docInput);
     }
 
     const birthSection = document.getElementById('birth-section');
     const birthInput = birthSection.querySelector('input');
     birthInput.onfocus = function() {
         errorFocus(birthSection);
-        adjustInput(birthSection, birthInput);
     }
     birthInput.onblur = function() {
         validations[3] = errorBlur(birthSection, birthInput);
-        adjustInput(birthSection, birthInput);
     }
 
     const phoneSection = document.getElementById('phone-section');
     const phoneInput = phoneSection.querySelector('input');
     phoneInput.onfocus = function() {
         errorFocus(phoneSection);
-        adjustInput(phoneSection, phoneInput);
     }
     phoneInput.onblur = function() {
         validations[4] = errorBlur(phoneSection, phoneInput);
-        adjustInput(phoneSection, phoneInput);
     }
 
     const addressSection = document.getElementById('address-section');
     const addressInput = addressSection.querySelector('input');
     addressInput.onfocus = function() {
         errorFocus(addressSection);
-        adjustInput(addressSection, addressInput);
     }
     addressInput.onblur = function() {
         validations[5] = errorBlur(addressSection, addressInput);
-        adjustInput(addressSection, addressInput);
     }
 
     const townSection = document.getElementById('town-section');
     const townInput = townSection.querySelector('input');
     townInput.onfocus = function() {
         errorFocus(townSection);
-        adjustInput(townSection, townInput);
     }
     townInput.onblur = function() {
         validations[6] = errorBlur(townSection, townInput);
-        adjustInput(townSection, townInput);
     }
 
     const postalSection = document.getElementById('postal-section');
     const postalInput = postalSection.querySelector('input');
     postalInput.onfocus = function() {
         errorFocus(postalSection);
-        adjustInput(postalSection, postalInput);
     }
     postalInput.onblur = function() {
         validations[7] = errorBlur(postalSection, postalInput);
-        adjustInput(postalSection, postalInput);
     }
 
     const emailSection = document.getElementById('email-section');
     const emailInput = emailSection.querySelector('input');
     emailInput.onfocus = function() {
         errorFocus(emailSection);
-        adjustInput(emailSection, emailInput);
     }
     emailInput.onblur = function() {
         validations[8] = errorBlur(emailSection, emailInput);
-        adjustInput(emailSection, emailInput);
     }
 
     const passSection = document.getElementById('pass-section');
     const passInput = passSection.querySelector('input');
     passInput.onfocus = function() {
         errorFocus(passSection);
-        adjustInput(passSection, passInput);
-        adjustInput(rPassSection, rPassInput);
     }
     passInput.onblur = function() {
         validations[9] = errorBlur(passSection, passInput);
@@ -288,24 +260,18 @@ window.onload = function () {
             errorFocus(rPassSection);
         }
         validations[10] = errorRepeat(passSection, rPassSection);
-        adjustInput(passSection, passInput);
-        adjustInput(rPassSection, rPassInput);
     }
 
     const rPassSection = document.getElementById('rpass-section');
     const rPassInput = rPassSection.querySelector('input');
     rPassInput.onfocus = function() {
         errorFocus(rPassSection);
-        adjustInput(passSection, passInput);
-        adjustInput(rPassSection, rPassInput);
     }
     rPassInput.onblur = function() {
         validations[10] = errorBlur(rPassSection, rPassInput);
         if (rPassSection.querySelector('.error-label') == null) {
             validations[9] = errorRepeat(passSection, rPassSection);
         }
-        adjustInput(passSection, passInput);
-        adjustInput(rPassSection, rPassInput);
     }
 
     var userPassword = localStorage.getItem('password');

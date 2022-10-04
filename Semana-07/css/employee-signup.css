@@ -73,9 +73,6 @@ section {
     font: bold 12px 'Abel', sans-serif;
     color: #FF0000;
 }
-.error-input {
-    height: 22.5%;
-}
 @media screen and (min-width: 1024px) {
     main {
         height: 80%;
