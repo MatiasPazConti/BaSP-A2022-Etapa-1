@@ -13,15 +13,18 @@ function errorBlur(section, input) {
     if (input.value == '') {
         errorLabel.innerHTML = 'Required field';
         section.appendChild(errorLabel);
+        return false;
     }
     else if (section.getAttribute('id') == 'user-section') {
         var emailValidation = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
         if (!emailValidation.test(input.value)) {
             errorLabel.innerHTML = 'Invalid email';
             section.appendChild(errorLabel);
+            return false;
         }
         else {
             delete errorLabel;
+            return true;
         }
     }
     else if (section.getAttribute('id') == 'pass-section') {
@@ -32,17 +35,23 @@ function errorBlur(section, input) {
         {
             errorLabel.innerHTML = 'Invalid password';
             section.appendChild(errorLabel);
+            return false;
         }
         else {
             delete errorLabel;
+            return true;
         }
     }
     else {
         delete errorLabel;
+        alert('Invalid field!');
+        return false;
     }
 }
 window.onload = function() {
-    //  Username Functions
+    var userValidation = false;
+    var passValidation = false;
+
     const userSection = document.getElementById('user-section');
     const userInput = userSection.querySelector('input');
     userInput.onfocus = function() {
@@ -51,37 +60,44 @@ window.onload = function() {
         errorFocus(userSection);
     }
     userInput.onblur = function() {
-        errorBlur(userSection, userInput);
+        userValidation = errorBlur(userSection, userInput);
     }
-    //  Password Functions
+
     const passSection = document.getElementById('pass-section');
     const passInput = passSection.querySelector('input');
     passInput.onfocus = function() {
-        passInput.setAttribute('type', 'password');
         passInput.setAttribute('value', '');
-        passInput.classList.add('color-black');
         errorFocus(passSection);
     }
     passInput.onblur = function() {
-        errorBlur(passSection, passInput);
+        passValidation = errorBlur(passSection, passInput);
     }
-    //  Login-Button
+
     const loginButton = document.querySelector('.login-button');
     loginButton.onclick = function(f) {
         f.preventDefault();
-        //  Username
-        userInput.setAttribute('value', '');
-        errorFocus(userSection);
-        errorBlur(userSection, userInput);
-        //  Password
-        passInput.setAttribute('value', '');
-        errorFocus(passSection);
-        errorBlur(passSection, passInput);
-        if ((document.querySelector('.error-label') != null)) {
-            alert('There is an invalid field!');
+        if (!userValidation && !passValidation) {
+            alert('Invalid email and password!');
+        }
+        else if (!userValidation) {
+            alert('Invalid email!');
+        }
+        else if (!passValidation) {
+            alert('Invalid password!');
         }
         else {
-            alert('Successfully loged in!');
+            var urlWithQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + userInput.value + '&password=' + passInput.value;
+            fetch(urlWithQP)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data){
+                    console.log(data);
+                    alert(data.msg);
+                })
+                .catch(function(error) {
+                    console.log('Error:', error);
+                })
         }
     }
 }
