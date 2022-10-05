@@ -12,6 +12,8 @@ header {
     height: 10%;
     background-color: #FF0000;
     font: bold 42px 'Abel', sans-serif;
+}
+h1 {
     color: white;
 }
 main {

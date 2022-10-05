@@ -3,10 +3,12 @@ const NUMBERS = '1234567890';
 const LETTERS = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 
 function errorFocus(section) {
-    var errorLabel = section.querySelector('.error-label');
+    var errorLabel = section.querySelectorAll('.error-label');
     if (errorLabel != null) {
-        section.removeChild(errorLabel);
-        delete errorLabel;
+        for (i = 0; i < errorLabel.length; i++) {
+            section.removeChild(errorLabel[i]);
+            delete errorLabel[i];
+        }
     }
 }
 function errorBlur(section, input) {
