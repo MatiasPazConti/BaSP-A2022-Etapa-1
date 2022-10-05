@@ -23,11 +23,15 @@ function errorBlur(section, input) {
             case 'lname-section':
                 var nameValidation = true;
                 for (i = 0; nameValidation && (i < input.value.length); i++){
-                    nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1) || (input.value.charAt(i) == EMPTYSPACE);
+                    nameValidation = (LETTERS.indexOf(input.value.charAt(i), 0) != -1);
                 }
-                var invalidSpace = input.value.indexOf(EMPTYSPACE, 0) != -1;
-                if ((input.value.length <= 3) || !nameValidation || invalidSpace) {
-                    errorLabel.innerHTML = 'Invalid name';
+                if ((input.value.length <= 3) || !nameValidation) {
+                    if (input.value.length <= 3) {
+                        errorLabel.innerHTML = 'Name is too short';    
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Name has invalid characters';
+                    }
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -41,7 +45,12 @@ function errorBlur(section, input) {
                     docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
                 }
                 if ((input.value.length <= 7) || !docValidation) {
-                    errorLabel.innerHTML = 'Invalid document';
+                    if (input.value.length <= 7) {
+                        errorLabel.innerHTML = 'Document number is too short';    
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Document number has invalid characters';
+                    }
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -51,15 +60,31 @@ function errorBlur(section, input) {
                     return true;
                 }
             case 'birth-section':
-                delete errorLabel;
-                return true;
+                var dateArray = input.value.split('-');
+                if ((dateArray[0] < 1920) || (dateArray[0] > 2022)) {
+                    errorLabel.innerHTML = 'Invalid date';
+                    section.appendChild(errorLabel);
+                    return false;
+                }
+                else {
+                    delete errorLabel;
+                    return true;
+                }
             case 'phone-section':
                 var phoneValidation = true;
                 for (i = 0; phoneValidation && (i < input.value.length); i++) {
                     phoneValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
                 }
                 if ((input.value.length != 10) || !phoneValidation) {
-                    errorLabel.innerHTML = 'Invalid number';
+                    if (input.value.length < 10) {
+                        errorLabel.innerHTML = 'Phone number is too short';    
+                    }
+                    else if (input.value.length > 10) {
+                        errorLabel.innerHTML = 'Phone number is too long';
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Phone number has invalid characters';
+                    }
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -97,15 +122,41 @@ function errorBlur(section, input) {
                     }
                 }
             case 'town-section':
-                delete errorLabel;
-                return true;
+                var townValidation = true;
+                for (i = 0; townValidation && (i < input.value.length); i++) {
+                    townValidation = (NUMBERS.indexOf(input.value.charAt(i), 0) != -1) ||
+                    (LETTERS.indexOf(input.value.charAt(i), 0) != -1);
+                }
+                if ((input.value.length < 4) || !townValidation) {
+                    if (input.value.length < 4) {
+                        errorLabel.innerHTML = 'Town name is too short';
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Town name has invalid characters';
+                    }
+                    section.appendChild(errorLabel);
+                    return false;
+                }
+                else
+                {
+                    delete errorLabel;
+                    return true;
+                }
             case 'postal-section':
                 var postalValidation = true;
                 for (i = 0; postalValidation && (i < input.value.length); i++) {
-                    docValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
+                    postalValidation = NUMBERS.indexOf(input.value.charAt(i), 0) != -1;
                 }
-                if ((input.value.length < 4) || (input.value.length > 5) || !docValidation) {
-                    errorLabel.innerHTML = 'Invalid code';
+                if ((input.value.length < 4) || (input.value.length > 5) || !postalValidation) {
+                    if (input.value.length < 4) {
+                        errorLabel.innerHTML = 'Postal code is too short';
+                    }
+                    else if (input.value.length > 5) {
+                        errorLabel.innerHTML = 'Postal code is too long';
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Postal code has invalid characters';
+                    }
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -117,7 +168,7 @@ function errorBlur(section, input) {
             case 'email-section':
                 var emailValidation = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
                 if (!emailValidation.test(input.value)) {
-                    errorLabel.innerHTML = 'Invalid email';
+                    errorLabel.innerHTML = 'Email has invalid characters';
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -128,11 +179,18 @@ function errorBlur(section, input) {
             case 'pass-section':
             case 'rpass-section':
                 var passValidation = /^[a-z0-9]+$/i;
-                console.log(input.value);
-                console.log(input.value.length);
-                if ((input.value.length < 8) || (input.value.length > 16) || !passValidation.test(input.value))
+                if ((input.value.length < 8) || (input.value.length > 16) ||
+                !passValidation.test(input.value))
                 {
-                    errorLabel.innerHTML = 'Invalid password';
+                    if (input.value.length < 8) {
+                        errorLabel.innerHTML = 'Password is too short';  
+                    }
+                    else if (input.value.length > 16) {
+                        errorLabel.innerHTML = 'Password is too long';  
+                    }
+                    else {
+                        errorLabel.innerHTML = 'Password has invalid characters';
+                    }
                     section.appendChild(errorLabel);
                     return false;
                 }
@@ -360,7 +418,6 @@ window.onload = function () {
                 return response.json();
             })
             .then(function(data) {
-                console.log('Data:', data);
                 if (data.success) {
                     localStorage.setItem('firstName', fNameInput.value);
                     localStorage.setItem('lastName', lNameInput.value);
@@ -381,6 +438,7 @@ window.onload = function () {
                 }
             })
             .catch(function(error) {
+                alert('URL request failed!');
                 console.log('Error:', error);
             })
         }
